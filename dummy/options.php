@@ -12,6 +12,8 @@
 
 <?php $fields->textarea('text', 'Text') ?>
 
+<?php $fields->media('image', 'Image') ?>
+
 <?php 
 // Two font selector, see the block.php on how to use them with the default newsletter values and inline style 
 // For compatibility reasons the "default" option for family, size and weight selectors should be explicitely enabled

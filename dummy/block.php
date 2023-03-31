@@ -38,6 +38,19 @@ $title_style = TNP_Composer::get_title_style($options, 'title', $composer);
 $text_style = TNP_Composer::get_text_style($options, 'text', $composer);
 
 
+// Image preparation (again, that is a bit tricky...)
+
+$media = null;
+if (!empty($options['image']['id'])) {
+    // The $media is an onject containing the image URL and the size to specify in the HTML tag. The image is resized at
+    // 2x to be sharp on mobile devices.
+    $media = tnp_resize_2x($options['image']['id'], [$composer['width'], 0]);
+    // Should never happen but... it happens
+    if (!$media) {
+        // Do something...
+    }
+}
+
 // $options is processed with the wp_kses(...) so there is no need to escape it and that
 // allow a richer content with safe HTML tags.
 
@@ -62,5 +75,11 @@ $text_style = TNP_Composer::get_text_style($options, 'text', $composer);
 ?>
 
 <h1 inline-class="title"><?php echo $options['title']?></h1>
+
+<?php
+// This methos deal with CSS, attributes, link and so on. 
+?>
+
+<?php if ($media) echo TNP_Composer::image($media) ?>
 
 <p inline-class="text"><?php echo $options['text']?></p>
