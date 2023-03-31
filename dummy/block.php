@@ -14,7 +14,7 @@
 // "block_background" and "block_padding_*" are used to generated the wrapper of the block content.
 
 $default_options = array(
-    'title' => 'You title',
+    'title' => 'Your stunning title',
     'text' => 'Your nice text to describe whatever you want to describe.',
 
     'block_padding_left' => 15,
@@ -49,7 +49,7 @@ $text_style = TNP_Composer::get_text_style($options, 'text', $composer);
 ?>
 <style>
     .title {
-        <?php $text_style->echo_css() ?>
+        <?php $title_style->echo_css() ?>
     }
     
     .text {
