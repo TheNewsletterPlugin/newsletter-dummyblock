@@ -1,8 +1,8 @@
 <?php
 /*
-  Plugin Name: Newsletter - RSS Block
+  Plugin Name: Newsletter - Dummy Block
   Plugin URI: https://www.thenewsletterplugin.com
-  Description: A RSS block for the Newsletter composer
+  Description: A dummy block for the Newsletter composer
   Version: 1.0.0
   Author: The Newsletter Team
   Author URI: https://www.thenewsletterplugin.com
